@@ -1,3 +1,4 @@
+#!groovy
 node {
-  echo "hello Jenkinsfile"
+    echo "Work　Jenkinsfile!!"
 }
