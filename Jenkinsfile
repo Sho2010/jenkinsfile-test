@@ -2,9 +2,10 @@
 node {
     stage "hello jenkins"
     echo "Work　Jenkinsfile!!"
+    sh 'gcloud auth list'
 
     stage "file check out"    
-    git 'https://github.com/sho2010/jenkinsfile-test'
+    checkout scm
     
     stage "docker build"
     def tag = "test-nginx:${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
