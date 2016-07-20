@@ -5,6 +5,9 @@ node ('gcloud'){
 
     stage "file check out"    
     checkout scm
+
+    stage "bundle install"
+    sh 'bundle install'
     
     stage "docker build"
     // env.GCP_PROJECT is jenkins global enviroment 
